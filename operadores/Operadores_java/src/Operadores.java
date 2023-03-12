@@ -21,8 +21,26 @@ public class Operadores {
         String nomeCompleto = "Ana " + "Maria";
         System.out.println(nomeCompleto);
 
+        // Operador de atribuição ( = )
+        // Operadores aritimeticos ( + , - , * , / , %) 
+        // Operador Unário 
+        // valor possitivo ou incremento, decremento
+            // (+) valor positivo (++) incremento
+            // (-) valor negativo (--) decremento
+        int numero1 = 5;
+        numero1 = - numero1; //negativo
+        System.out.print(numero1);
 
-        //  
+        //operador ternario > Expressão condicional ' ? ' <caso condição seja true> : <caso condição seja false>
+        int a, b;
+        a = 5;
+        b = 6;
+
+        String resultado1 = a==b ? "verdadeiro" : "false" ;
+        System.out.println(resultado1);
+
+        
+
 
     }
 }
