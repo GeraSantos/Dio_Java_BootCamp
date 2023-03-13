@@ -39,8 +39,12 @@ public class Main {
 			System.out.println("Outubro");
 		} else if(mes == 11) {
 			System.out.println("Novembro");
-		} else {System.out.println("Dezembro");
-			}		
+		} else if (mes == 12) {
+			System.out.println("Dezembro");
+		} else {
+			System.out.println("Mês inesperado");
+		}
+		
 		
 	}
 	
@@ -105,7 +109,7 @@ public class Main {
 			System.out.println(1);
 			break;
 		default:
-			System.out.println(8);
+//			System.out.println(1);
 			 System.out.println("Dia invalido");
 			break;
 		}
