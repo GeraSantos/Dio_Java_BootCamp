@@ -1,16 +1,16 @@
 package one.digitalInovation;
 
-public class Fila {
+public class Fila<T> {
 	
-	private No refNoEntradaFila;
+	private No<T> refNoEntradaFila;
 
 	public Fila() {
 		this.refNoEntradaFila = null;
 	}
 	
 	//metodo enqueue
-	public void enqueue(Object obj) {
-		No novoNo = new No(obj);
+	public void enqueue(T object) {
+		No novoNo = new No(object);
 		novoNo.setRefNo(refNoEntradaFila);
 		refNoEntradaFila = novoNo;
 	}
@@ -18,7 +18,7 @@ public class Fila {
 	
 	
 	//metodo in fisrt
-	public Object first() {
+	public T first() {
 		if(!this.isEmpty()) {
 			No primeiroNo = refNoEntradaFila;
 			while (true) {
@@ -28,13 +28,13 @@ public class Fila {
 					break;
 				}
 			}
-			return primeiroNo.getObject();
+			return (T) primeiroNo.getObject();
 		}
 		return null;
 	}
 	
 	//Método dequeue
-	public Object dequeue() {
+	public T dequeue() {
 		if(!this.isEmpty()) {
 			No primeiroNo = refNoEntradaFila;
 			No noAuxiliar = refNoEntradaFila;
@@ -47,7 +47,7 @@ public class Fila {
 					break;
 				}
 			}
-			return primeiroNo.getObject();
+			return (T) primeiroNo.getObject();
 		}
 		return null;
 	}

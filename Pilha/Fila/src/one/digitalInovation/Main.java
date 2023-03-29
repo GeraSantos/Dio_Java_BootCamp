@@ -4,20 +4,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Fila minhaFila = new Fila();
+		Fila<String> minhaFila = new Fila<>();
 		
-		minhaFila.enqueue(new No("Primeiro"));
-		minhaFila.enqueue(new No("Segundo"));
-		minhaFila.enqueue(new No("Terceiro"));
-		minhaFila.enqueue(new No("Quarto"));
-		minhaFila.enqueue(new No("Quinto"));
-		minhaFila.enqueue(new No("Sexto"));
+		minhaFila.enqueue("Primeiro");
+		minhaFila.enqueue("Segundo");
+		minhaFila.enqueue("Terceiro");
+		minhaFila.enqueue("Quarto");
+		minhaFila.enqueue("Quinto");
+		minhaFila.enqueue("Sexto");
 		
 		System.out.println(minhaFila);
 		
 		System.out.println(minhaFila.dequeue());
 		
-		minhaFila.enqueue(new No("Ultimo"));
+		minhaFila.enqueue("Ultimo");
 		
 		System.out.println(minhaFila);
 		
