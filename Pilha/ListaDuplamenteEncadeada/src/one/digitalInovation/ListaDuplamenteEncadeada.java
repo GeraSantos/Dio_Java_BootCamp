@@ -18,6 +18,20 @@ public class ListaDuplamenteEncadeada<T> {
 		return this.getNo(index).getConteudo();
 	}
 	
+	public void add(T elemento) {
+		NoDuplo<T> novoNo = new NoDuplo<>(elemento);
+		novoNo.setNoProximo(null);
+		novoNo.setNoPrevio(ultimoNo); //aponta para o antigo ultimo no da lista
+		if(primeiroNo == null) {
+			primeiroNo = novoNo;
+		}
+		if(ultimoNo == null) {
+			ultimoNo.setNoProximo(novoNo);
+		}
+		ultimoNo = novoNo;
+		tamanhoLista++;
+	}
+	
 	//método getNo será utilizado em outros métodos
 	private  NoDuplo<T> getNo(int index){
 		NoDuplo<T> noAuxiliar = primeiroNo;
@@ -28,7 +42,7 @@ public class ListaDuplamenteEncadeada<T> {
 	}
 	
 	public int size(){
-		return tamanhoLista;
+		return this.tamanhoLista;
 	}
 	
 }
